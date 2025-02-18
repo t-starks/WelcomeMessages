@@ -1,0 +1,20 @@
+# Mensajes de bienvenida
+welcome_message: "§a¡Bienvenido, {player}, al servidor!"
+
+# Mensajes de mundos
+world_messages:
+  parcelas: "§eEstás en §bParcelas"
+  minas: "§eEstás en §bMinas"
+  pvp: "§eEstás en §bPvP"
+  survival: "§eEstás en §bSurvival"
+
+# Mensajes de muerte
+death_messages:
+  fall: "§c{player} murió por caída."
+  drowning: "§c{player} murió ahogado."
+  hunger: "§c{player} murió de hambre."
+  default: "§c{player} murió."
+
+# Mensajes de asesinato
+kill_messages:
+  default: "§c{player} fue asesinado por {killer} usando {weapon}."

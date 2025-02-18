@@ -84,11 +84,6 @@ kill_messages:
 
 ---
 
-## **Capturas de Pantalla**
-*(Aquí puedes agregar capturas de pantalla del plugin en acción)*
-
----
-
 ## **Contribuciones**
 ¡Las contribuciones son bienvenidas! Si encuentras un error o tienes una idea para mejorar el plugin, abre un **issue** o envía un **pull request** en [GitHub](https://github.com/t-starks/WelcomeMessages).
 
