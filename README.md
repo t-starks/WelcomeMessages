@@ -19,90 +19,72 @@
   </tr>
 </table>
 
-¡Bienvenido a **WelcomeMessages**, un plugin para PocketMine-MP que mejora la experiencia de los jugadores mostrando mensajes personalizables cuando entran al servidor, cambian de mundo, mueren o son asesinados.
+Welcome to **WelcomeMessages**, a PocketMine-MP plugin that enhances the player experience by displaying customizable messages when they join the server, change worlds, die, or are killed.
 
----
+## **Features**
+- **Welcome Message**: Displays a customizable message when a player joins the server.
+- **ActionBar Messages**: Shows a message in the ActionBar when a player teleports to a specific world.
+- **Death Messages**: Notifies the cause of a player's death (falling, drowning, starvation, etc.).
+- **Kill Messages**: Displays a message when a player is killed by another, including the weapon used.
+- **Customizable Configuration**: All messages can be modified in the `config.yml` file.
 
-## **Características**
-- **Mensaje de bienvenida**: Muestra un mensaje personalizable cuando un jugador entra al servidor.
-- **Mensajes en ActionBar**: Muestra un mensaje en la ActionBar cuando un jugador se teletransporta a un mundo específico.
-- **Mensajes de muerte**: Notifica la causa de la muerte de un jugador (caída, ahogamiento, hambre, etc.).
-- **Mensajes de asesinato**: Muestra un mensaje cuando un jugador es asesinado por otro, incluyendo el arma utilizada.
-- **Configuración personalizable**: Todos los mensajes se pueden modificar en el archivo `config.yml`.
 
----
+## **Installation**
+1. Download the `.phar` file from [Poggit](https://poggit.pmmp.io) or compile the plugin yourself.
+2. Place the `.phar` file in your PocketMine-MP server's `plugins` folder.
+3. Restart the server.
+4. Done! The plugin will be enabled automatically.
 
-## **Instalación**
-1. Descarga el archivo `.phar` desde [Poggit](https://poggit.pmmp.io) o compila el plugin tú mismo.
-2. Coloca el archivo `.phar` en la carpeta `plugins` de tu servidor PocketMine-MP.
-3. Reinicia el servidor.
-4. ¡Listo! El plugin se habilitará automáticamente.
+## **Configuration**
+The plugin automatically generates a `config.yml` file in the `plugins/WelcomeMessages/` folder. You can customize the messages by editing this file.
 
----
-
-## **Configuración**
-El plugin genera automáticamente un archivo `config.yml` en la carpeta `plugins/WelcomeMessages/`. Puedes personalizar los mensajes editando este archivo.
-
-### **Ejemplo de `config.yml`**
+### **Example `config.yml`**
 ```yaml
-# Mensaje de bienvenida cuando un jugador entra al servidor
-welcome_message: "§a¡Bienvenido, {player}, al servidor!"
+# Welcome message when a player joins the server
+welcome_message: "§aWelcome, {player}, to the server!"
 
-# Mensajes de mundos
+# World messages
 world_messages:
-  parcelas: "§eEstás en §bParcelas"
-  minas: "§eEstás en §bMinas"
-  pvp: "§eEstás en §bPvP"
-  survival: "§eEstás en §bSurvival"
+  parcels: "§eYou are in §bParcels"
+  mines: "§eYou are in §bMines"
+  pvp: "§eYou are in §bPvP"
+  survival: "§eYou are in §bSurvival"
 
-# Mensajes de muerte
+# Death messages
 death_messages:
-  fall: "§c{player} murió por caída."
-  drowning: "§c{player} murió ahogado."
-  hunger: "§c{player} murió de hambre."
-  default: "§c{player} murió."
+  fall: "§c{player} died from falling."
+  drowning: "§c{player} drowned."
+  hunger: "§c{player} died of hunger."
+  default: "§c{player} died."
 
-# Mensajes de asesinato
+# Kill messages
 kill_messages:
-  default: "§c{player} fue asesinado por {killer} usando {weapon}."
+  default: "§c{player} was killed by {killer} using {weapon}."
 ```
 
-### **Variables disponibles**
-- `{player}`: Nombre del jugador.
-- `{killer}`: Nombre del asesino.
-- `{weapon}`: Arma utilizada para el asesinato.
+### **Available Variables**
+- `{player}`: Player's name.
+- `{killer}`: Killer's name.
+- `{weapon}`: Weapon used for the kill.
+
+## **Commands**
+- **/wmreload**: Reloads the plugin configuration without restarting the server.
+
+## **Permissions**
+- `welcomemessages.reload`: Allows the use of the `/wmreload` command.
+
+## **Contributions**
+Contributions are welcome! If you find a bug or have an idea to improve the plugin, open an **issue** or submit a **pull request** on [GitHub](https://github.com/t-starks/WelcomeMessages).
 
 ---
 
-## **Comandos**
-- **/wmreload**: Recarga la configuración del plugin sin reiniciar el servidor.
+## **Credits**
+- **Developer**: [T. Stark](https://github.com/t-starks)
+- **Version**: 1.0.0
+- **PocketMine-MP API**: 5.0.0
 
----
-
-## **Permisos**
-- `welcomemessages.reload`: Permite usar el comando `/wmreload`.
-
----
-
-## **Contribuciones**
-¡Las contribuciones son bienvenidas! Si encuentras un error o tienes una idea para mejorar el plugin, abre un **issue** o envía un **pull request** en [GitHub](https://github.com/t-starks/WelcomeMessages).
-
----
-
-## **Créditos**
-- **Desarrollador**: [T. Stark](https://github.com/t-starks)
-- **Versión**: 1.0.0
-- **API de PocketMine-MP**: 5.0.0
-
----
-
-## **Licencia**
-Este plugin está bajo la licencia **GPL-3.0**. Consulta el archivo [LICENSE](https://github.com/t-starks/WelcomeMessages/blob/main/LICENSE) para más detalles.
-
----
-
-## 💰 Donaciones
-[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/tstark)
+## 💰 Donations
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/tstark)  
 [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/tstark)
 
-¡Gracias por usar **WelcomeMessages**! Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarme. 😊
+Thank you for using **WelcomeMessages**! If you have any questions or need help, feel free to contact me. 😊
