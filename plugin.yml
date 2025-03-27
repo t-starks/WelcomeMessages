@@ -5,10 +5,10 @@ api: 5.0.0
 author: §bT. Stark
 commands:
   wmreload:
-    description: Recarga la configuración del plugin.
+    description: Reloads the plugin configuration.
     permission: welcomemessages.reload
 permissions:
   welcomemessages.reload:
-    description: Permite usar el comando /wmreload.
+    description: Allows you to use the /wmreload command.
     default: op
 website: §ahttps://mcpetools.surge.sh
