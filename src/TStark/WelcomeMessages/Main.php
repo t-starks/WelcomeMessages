@@ -22,14 +22,12 @@ class Main extends PluginBase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
-    // Evento: Jugador entra al servidor
     public function onJoin(PlayerJoinEvent $event): void {
         $player = $event->getPlayer();
         $welcomeMessage = str_replace("{player}", $player->getName(), $this->config->get("welcome_message"));
         $player->sendMessage($welcomeMessage);
     }
 
-    // Evento: Jugador cambia de mundo
     public function onRespawn(PlayerRespawnEvent $event): void {
         $player = $event->getPlayer();
         $worldName = $player->getWorld()->getFolderName();
@@ -37,7 +35,6 @@ class Main extends PluginBase implements Listener {
         $player->sendActionBarMessage($worldMessage);
     }
 
-    // Evento: Jugador muere
     public function onDeath(PlayerDeathEvent $event): void {
         $player = $event->getPlayer();
         $cause = $player->getLastDamageCause();
@@ -65,7 +62,6 @@ class Main extends PluginBase implements Listener {
         $this->getServer()->broadcastMessage($deathMessage);
     }
 
-    // Evento: Jugador es asesinado por otro jugador
     public function onKill(PlayerDeathEvent $event): void {
         $player = $event->getPlayer();
         $cause = $player->getLastDamageCause();
